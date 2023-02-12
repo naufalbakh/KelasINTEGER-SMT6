@@ -58,6 +58,19 @@
       display: none;
       padding: 6px 12px;
     }
+
+    .sidenav {
+      height: 100%;
+      width: 0;
+      position: fixed;
+      z-index: 1;
+      top: 0;
+      left: 0;
+      background-color: #4C4F6A;
+      overflow-x: hidden;
+      transition: 0.5s;
+      padding-top: 30px;
+    }
   </style>
 </head>
 
@@ -70,6 +83,68 @@
       </div>
     </div>
   </header>
+
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container justify-content-center">
+      <button class="navbar-toggler" type="button" onclick="openNav()" data-bs-toggle="mySidenav"
+        data-bs-target="#mySidenav" aria-controls="mySidenav">
+        <h5><i class="bi bi-search"></i> Search</h5>
+      </button>
+      <div class="sidenav text-bg-dark" tabindex="-1" id="mySidenav" aria-labelledby="offcanvasDarkNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-light" id="offcanvasDarkNavbarLabel">Pencarian Matakuliah</h5>
+          <a type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"
+            onclick="closeNav()"></a>
+        </div>
+        <div class="offcanvas-body">
+          <div id="list-example" class="list-group">
+            <div>
+              <div class="offcanvas-header my-2">
+                <h5 class="offcanvas-title text-light" id="offcanvasDarkNavbarLabel">Wajib</h5>
+              </div>
+              <a class="list-group-item list-group-item-action" href="#dataScience">Data Science</a>
+              <a class="list-group-item list-group-item-action" href="#iMK">Interaksi Manusia dan Komputer</a>
+              <a class="list-group-item list-group-item-action" href="#komVis">Komputer Vision</a>
+              <a class="list-group-item list-group-item-action" href="#menPro">Manajemen Proyek</a>
+              <a class="list-group-item list-group-item-action" href="#techno">Technopreneurship</a>
+            </div>
+
+            <div>
+              <div class="offcanvas-header my-2">
+                <h5 class="offcanvas-title text-light" id="offcanvasDarkNavbarLabel">Optional</h5>
+              </div>
+              <a class="list-group-item list-group-item-action" href="#animation">Animation Creator</a>
+              <a class="list-group-item list-group-item-action" href="#bioinfo">Bioinformatics</a>
+              <a class="list-group-item list-group-item-action" href="#biomed">Biomedics</a>
+              <a class="list-group-item list-group-item-action" href="#cloud">Cloud Computing</a>
+              <a class="list-group-item list-group-item-action" href="#data">Datamining</a>
+              <a class="list-group-item list-group-item-action" href="#frame">Framework Programming</a>
+              <a class="list-group-item list-group-item-action" href="#gis">Geographical Information System</a>
+              <a class="list-group-item list-group-item-action" href="#infoRet">Information Retreival</a>
+              <a class="list-group-item list-group-item-action" href="#inMar">Internet Marketing</a>
+              <a class="list-group-item list-group-item-action" href="#IoT">Internet Of Thing</a>
+              <a class="list-group-item list-group-item-action" href="#IoS">IoS</a>
+              <a class="list-group-item list-group-item-action" href="#Audit">IT Audit</a>
+              <a class="list-group-item list-group-item-action" href="#Knowledge">Knowledge Engineering</a>
+              <a class="list-group-item list-group-item-action" href="#ML">Machine Learning</a>
+              <a class="list-group-item list-group-item-action" href="#NLP">Natural Language Processing</a>
+              <a class="list-group-item list-group-item-action" href="#Robot">Robotic</a>
+              <a class="list-group-item list-group-item-action" href="#Modeling">Simulation And Modeling</a>
+              <a class="list-group-item list-group-item-action" href="#Start">Start-Up Development</a>
+              <a class="list-group-item list-group-item-action" href="#Secure">System Security</a>
+              <a class="list-group-item list-group-item-action" href="#UIGame">User Interface & Game Environment</a>
+              <a class="list-group-item list-group-item-action" href="#arsitek">Arsitektur Enterprise </a>
+              <a class="list-group-item list-group-item-action" href="#KPL">Kualitas Perangkat Lunak</a>
+              <a class="list-group-item list-group-item-action" href="#Soft">Soft Computing </a>
+              <a class="list-group-item list-group-item-action" href="#Govern">It Governance </a>
+              <a class="list-group-item list-group-item-action" href="#MPL">Manajemen Perangkat Lunak</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
   <!-- MENU -->
 
   <div class="row" style="background-color: #22223B;">
@@ -97,7 +172,7 @@
 
         <!-- Data Science -->
         <section class="py-3">
-          <div class="mb-3">
+          <div class="mb-3" id="dataScience">
             <h2><i class="bi bi-clipboard2-data-fill"></i> Data Science</h2>
             <HR>
             </HR>
@@ -179,7 +254,7 @@
 
         <!-- Interaksi Manusia & Komputer -->
         <section class="py-5">
-          <div class="mb-3">
+          <div class="mb-3" id="iMK">
             <h2><i class="bi bi-person-workspace"></i> Interaksi Manusia & Komputer</h2>
             <HR>
             </HR>
@@ -251,7 +326,7 @@
 
         <!-- Komputer Vision -->
         <section class="py-5">
-          <div class="mb-3">
+          <div class="mb-3" id="komVis">
             <h2><i class="bi bi-pc-display"></i> Komputer Vision</h2>
             <HR>
             </HR>
@@ -323,7 +398,7 @@
 
         <!-- Manajemen Proyek -->
         <section class="py-5">
-          <div class="mb-3">
+          <div class="mb-3" id="menPro">
             <h2><i class="bi bi-kanban-fill"></i> Manajemen Proyek</h2>
             <HR>
             </HR>
@@ -395,7 +470,7 @@
 
         <!-- Technopreneurship -->
         <section class="py-5">
-          <div class="mb-3">
+          <div class="mb-3" id="techno">
             <h2><i class="bi bi-bag-heart"></i> Technopreneurship</h2>
             <HR>
             </HR>
@@ -466,6 +541,13 @@
         </section>
       </div>
 
+
+
+
+
+
+
+
       <!--                       OPTIONAL SUBJECT                       -->
       <div id="OPT" class="tabcontent">
         <div class="container px-lg-1 my-4 mt-5">
@@ -474,17 +556,19 @@
           </div>
         </div>
 
-        <!-- Data Science -->
+        <!--                            BARIS 1                            -->
+
         <div class="row justify-content-around">
-          <section class="col py-3">
-            <div class="mb-3">
-              <h2><i class="fa-solid fa-circle-plus"></i> Data Science</h2>
+          <!-- Animation Creator -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="animation">
+              <h2><i class="fa-solid fa-circle-plus"></i> Animation Creator</h2>
               <HR>
               </HR>
             </div>
 
-            <div class="row gy-4 justify-content-center">
-              <div class="col-md-5">
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
                 <div class="card text-center">
                   <div class="card-body">
                     <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
@@ -495,18 +579,30 @@
                 </div>
               </div>
             </div>
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas AA</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </section>
 
-          <!-- Interaksi Manusia & Komputer -->
-          <section class="col py-3">
-            <div class="mb-3">
-              <h2><i class="fa-solid fa-circle-plus"></i> INTERAKSI MANUSIA & KOMPUTER</h2>
+          <!-- Bioinformatics -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="bioinfo">
+              <h2><i class="fa-solid fa-circle-plus"></i> Bioinformatics</h2>
               <HR>
               </HR>
             </div>
 
-            <div class="row gy-4 justify-content-center">
-              <div class="col-md-5">
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
                 <div class="card text-center">
                   <div class="card-body">
                     <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
@@ -520,74 +616,691 @@
           </section>
         </div>
 
-        <!-- Komputer Vision -->
-        <section class="py-3">
-          <div class="mb-3">
-            <h2><i class="fa-solid fa-circle-plus"></i> KOMPUTER VISION</h2>
-            <HR>
-            </HR>
-          </div>
+        <!--                            BARIS 2                            -->
 
-          <div class="row gy-4 justify-content-center">
-            <div class="col-md-3">
-              <div class="card text-center">
-                <div class="card-body">
-                  <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
-                  <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
-                  <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
-                    target="_blank">Gabung Grup</a>
+        <div class="row justify-content-around">
+          <!-- Biomedics -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="biomed">
+              <h2><i class="fa-solid fa-circle-plus"></i> Biomedics</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
 
-        <!-- Manajemen Proyek -->
-        <section class="py-3">
-          <div class="mb-3">
-            <h2><i class="fa-solid fa-circle-plus"></i> MANAJEMEN PROYEK</h2>
-            <HR>
-            </HR>
-          </div>
+          <!-- Cloud Computing -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="cloud">
+              <h2><i class="fa-solid fa-circle-plus"></i> Cloud Computing</h2>
+              <HR>
+              </HR>
+            </div>
 
-          <div class="row gy-4 justify-content-center">
-            <div class="col-md-3">
-              <div class="card text-center">
-                <div class="card-body">
-                  <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
-                  <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
-                  <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
-                    target="_blank">Gabung Grup</a>
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-
-        <!-- Technopreneurship -->
-        <section class="py-3">
-          <div class="mb-3">
-            <h2><i class="fa-solid fa-circle-plus"></i> TECHNOPRENEURSHIP</h2>
-            <HR>
-            </HR>
-          </div>
-
-          <div class="row gy-4 justify-content-center">
-            <div class="col-md-3">
-              <div class="card text-center">
-                <div class="card-body">
-                  <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
-                  <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
-                  <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
-                    target="_blank">Gabung Grup</a>
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas AA</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
+          </section>
+        </div>
 
+        <!--                            BARIS 3                            -->
 
+        <div class="row justify-content-around">
+          <!-- Datamining -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="data">
+              <h2><i class="fa-solid fa-circle-plus"></i> Datamining</h2>
+              <HR>
+              </HR>
+            </div>
 
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Framework Programming -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="frame">
+              <h2><i class="fa-solid fa-circle-plus"></i> Framework Programming</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas AA</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!--                            BARIS 4                            -->
+
+        <div class="row justify-content-around">
+          <!-- Geographical Information System -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="gis">
+              <h2><i class="fa-solid fa-circle-plus"></i> Geographical Information System</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Information Retreival -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="infoRet">
+              <h2><i class="fa-solid fa-circle-plus"></i> Information Retreival</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas AA</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!--                            BARIS 5                            -->
+
+        <div class="row justify-content-around">
+          <!-- Internet Marketing -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="inMar">
+              <h2><i class="fa-solid fa-circle-plus"></i> Internet Marketing</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Internet Of Thing -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="IoT">
+              <h2><i class="fa-solid fa-circle-plus"></i> Internet Of Thing</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas AA</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!--                            BARIS 6                            -->
+
+        <div class="row justify-content-around">
+          <!-- IoS -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="IoS">
+              <h2><i class="fa-solid fa-circle-plus"></i> IoS</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- IT Audit -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="Audit">
+              <h2><i class="fa-solid fa-circle-plus"></i> IT Audit</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas AA</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!--                            BARIS 7                            -->
+
+        <div class="row justify-content-around">
+          <!-- Knowledge Engineering -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="Knowledge">
+              <h2><i class="fa-solid fa-circle-plus"></i> Knowledge Engineering</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Machine Learning -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="ML">
+              <h2><i class="fa-solid fa-circle-plus"></i> Machine Learning</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas AA</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!--                            BARIS 8                            -->
+
+        <div class="row justify-content-around">
+          <!-- Natural Language Processing -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="NLP">
+              <h2><i class="fa-solid fa-circle-plus"></i> Natural Language Processing</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Robotic -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="Robot">
+              <h2><i class="fa-solid fa-circle-plus"></i> Robotic</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas AA</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!--                            BARIS 9                            -->
+
+        <div class="row justify-content-around">
+          <!-- Simulation And Modeling -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="Modeling">
+              <h2><i class="fa-solid fa-circle-plus"></i> Simulation And Modeling</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Start-Up Development -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="Start">
+              <h2><i class="fa-solid fa-circle-plus"></i> Start-Up Development</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas AA</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!--                            BARIS 10                            -->
+
+        <div class="row justify-content-around">
+          <!-- System Security -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="Secure">
+              <h2><i class="fa-solid fa-circle-plus"></i> System Security</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- User Interface & Game Environment -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="UIGame">
+              <h2><i class="fa-solid fa-circle-plus"></i> User Interface & Game Environment</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas AA</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!--                            BARIS 11                            -->
+
+        <div class="row justify-content-around">
+          <!-- Arsitektur Enterprise  -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="arsitek">
+              <h2><i class="fa-solid fa-circle-plus"></i> Arsitektur Enterprise </h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- Kualitas Perangkat Lunak -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="KPL">
+              <h2><i class="fa-solid fa-circle-plus"></i> Kualitas Perangkat Lunak</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas AA</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!--                            BARIS 12                            -->
+
+        <div class="row justify-content-around">
+          <!-- Soft Computing -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="Soft">
+              <h2><i class="fa-solid fa-circle-plus"></i> Soft Computing</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- IT Governance -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="Govern">
+              <h2><i class="fa-solid fa-circle-plus"></i> IT Governance</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas AA</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!--                            BARIS 13                            -->
+
+        <div class="row justify-content-around">
+          <!-- Manajemen Perangkat Lunak -->
+          <section class="col py-3 px-1 mx-2">
+            <div class="mb-3" id="MPL">
+              <h2><i class="fa-solid fa-circle-plus"></i> Manajemen Perangkat Lunak</h2>
+              <HR>
+              </HR>
+            </div>
+
+            <div class="row mx-1 my-4 justify-content-around">
+              <div class="col-md-5">
+                <div class="card text-center">
+                  <div class="card-body">
+                    <h5 class="card-header mb-3 text-white fw-bolder">Kelas A</h5>
+                    <p class="card-text">Dr. FACHRUL K, ST., M. MT., IPM</p>
+                    <a href="https://chat.whatsapp.com/KOhq1OgihVn6NSrxD44GKT" class="btn btn-outline-light"
+                      target="_blank">Gabung Grup</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
       </div>
     </div>
   </div>
@@ -649,3 +1362,32 @@
 </body>
 
 </html>
+
+<!-- 
+Animation Creator
+Bioinformatics
+Biomedics
+Cloud Computing
+Datamining
+Framework Programming
+Geographical Information System
+Information Retreival
+Internet Marketing
+Internet Of Thing
+Ios
+It Audit
+Knowledge Engineering
+Machine Learning
+Natural Language Processing
+Robotic
+Simulation And Modeling
+Start-Up Development
+System Security
+User Interface & Game Environment
+
+Arsitektur Enterprise 
+Kualitas Perangkat Lunak 
+Soft Computing 
+It Governance 
+Manajemen Perangkat Lunak
+ -->
